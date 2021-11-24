@@ -14,6 +14,8 @@ gem 'webpacker', '~> 5.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'u-case', '~> 4.5.1', require: 'u-case/with_activemodel_validation'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
