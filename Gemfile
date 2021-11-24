@@ -26,6 +26,8 @@ end
 
 group :development do
   gem 'listen', '~> 3.3'
+
+  gem 'mailcatcher'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
