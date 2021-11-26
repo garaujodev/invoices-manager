@@ -2,7 +2,8 @@ class User::Register::Step::CreateRecord < Micro::Case
   attribute :email
 
   def call!
-    user = User.new(user_attributes).tap(&:save)
+    user = User.find_or_initialize_by(email: email)
+    user.update(user_attributes)
 
     return Success result: { user: user } if user.persisted?
 
