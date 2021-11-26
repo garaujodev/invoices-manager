@@ -39,10 +39,12 @@ ActiveRecord::Schema.define(version: 2021_11_19_205841) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "token"
+    t.string "email", null: false
+    t.string "token", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["token"], name: "index_users_on_token", unique: true
   end
 
   add_foreign_key "emails", "invoices"
