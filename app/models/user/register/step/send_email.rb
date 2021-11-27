@@ -1,5 +1,3 @@
-require 'u-case/with_activemodel_validation'
-
 class User::Register::Step::SendEmail < Micro::Case
   attribute :user
 
