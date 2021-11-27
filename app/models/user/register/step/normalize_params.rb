@@ -1,5 +1,3 @@
-require 'u-case/with_activemodel_validation'
-
 class User::Register::Step::NormalizeParams < Micro::Case
   attribute :params
 
