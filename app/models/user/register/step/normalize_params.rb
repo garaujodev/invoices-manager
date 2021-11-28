@@ -6,7 +6,7 @@ class User::Register::Step::NormalizeParams < Micro::Case
   def call!
     user_params = User::Params.to_register(params)
 
-    return Success result: { email: user_params[:email] }
+    Success result: { email: user_params[:email] }
   rescue ActionController::ParameterMissing => e
     Failure :parameter_missing, result: { message: e.message }
   end
