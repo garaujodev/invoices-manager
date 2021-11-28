@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   namespace :users do
     resources :registrations, only: :create
   end
+
+  resources :invoices do
+    post :email
+  end
 end
