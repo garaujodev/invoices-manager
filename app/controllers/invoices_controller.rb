@@ -25,6 +25,7 @@ class InvoicesController < ApplicationController
     Invoice::Manager::Email
       .call(user: current_user, params: params)
       .on_failure(:invalid_email) { |error| render_json(422, emails: error[:errors]) }
+      .on_failure(:invoice_not_found) { render_json(404, invoice: 'Invoice not found') }
       .on_success { |result| render_json(201, emails: 'Emails was recorded successfully') }
   end
 end
