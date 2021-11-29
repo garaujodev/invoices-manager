@@ -6,6 +6,9 @@ class Invoice::Manager::Email < Micro::Case
 
   def call!
     invoice = Invoice.find_by(id: params[:invoice_id])
+
+    return Failure :invoice_not_found unless invoice
+
     emails = params[:emails]
 
     emails.each { |email| invoice.emails.create!(email: email) }
