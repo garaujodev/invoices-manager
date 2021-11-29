@@ -14,7 +14,7 @@ $ asdf install // if you are using asdf
 
 ### Configuration
 
-In this project, we are using PostgresQL. Rails use the default PostgreSQL role and password, but if you need to change it, you can do it in [database.yml](config/database.yml)
+In this project, we are using PostgreSQL. Rails use the default PostgreSQL role and password, but if you need to change it, you can do it in [database.yml](config/database.yml).
 
 Run the following steps:
 
