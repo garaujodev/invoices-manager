@@ -9,10 +9,15 @@ class Invoice::Manager::Create < Micro::Case
 
     invoice = user.invoices.create(invoice_attributes.except(:emails))
 
-    invoice_attributes[:emails].each { |email| invoice.emails.create(email: email) }
+    emails = invoice_attributes[:emails]
 
-    return Success result: { invoice: invoice } if invoice.persisted?
+    if emails.present?
+      emails.each { |email| invoice.emails.create(email: email) }
+    end
 
-    Failure :parameter_missing, result: { errors: invoice.errors.as_json }
+    Success result: { invoice: invoice }
+
+  rescue ActionController::ParameterMissing => e
+    Failure :parameter_missing, result: { errors: e.message }
   end
 end
