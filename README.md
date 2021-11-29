@@ -59,6 +59,6 @@ To use the endpoints you will need to create your token:
 Now, with your token in hands, just put it on request `HEADERS`:
 
 ```console
-curl --location --request GET 'http://localhost:3000/invoices/:id' \
+curl --location --request GET 'http://localhost:3000/invoices/' \
 --header 'Authorization: Bearer token="5037a84f-e842-4ac9-b2c2-fdf2a28a8430"'
 ```
