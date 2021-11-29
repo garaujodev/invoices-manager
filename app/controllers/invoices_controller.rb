@@ -10,7 +10,7 @@ class InvoicesController < ApplicationController
   def create
     Invoice::Manager::Create
       .call(user: current_user, params: params)
-      .on_failure(:parameter_missing) { |error| render_json(422, invoice: error[:errors]) }
+      .on_failure(:parameter_missing) { |error| render_json(400, invoice: error[:errors]) }
       .on_success { |result| render_json(201, invoice: result[:invoice]) }
   end
 
