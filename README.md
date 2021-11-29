@@ -54,7 +54,7 @@ To use the endpoints you will need to create your token:
     $ mailcatcher
     ```
 
-  - Later, just access your localhost in port `1080` (eg.: http://127.0.0.1:1080/)
+  - Later, just access your localhost in port `1080` (ie.: localhost:1080/)
 
 Now, with your token in hands, just put it on request `HEADERS`:
 
