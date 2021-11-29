@@ -1,0 +1,7 @@
+first:
+  number: 1
+  due_at: <%= Time.current %>
+  bill_from: 'John Doe'
+  bill_to: 'Another User'
+  total: 1500.00
+  user: :john_doe

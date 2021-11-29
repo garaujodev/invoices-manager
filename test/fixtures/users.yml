@@ -1,0 +1,7 @@
+john_doe:
+  email: johndoe@email.com
+  token: f858f497-a883-4be1-a26f-c7ff5700b0c0
+
+another_user:
+  email: another@example.com
+  token: aff2eb9c-7651-41e7-9d9c-cba3ab625453
