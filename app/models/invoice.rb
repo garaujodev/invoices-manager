@@ -1,6 +1,8 @@
 class Invoice < ApplicationRecord
   has_many :emails
 
+  belongs_to :user
+
   with_options presence: true do
     validates :number
     validates :due_at
